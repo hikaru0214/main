@@ -94,31 +94,30 @@ a {
 }
 
 .profile {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  position: relative;
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 5% 0;
-  flex-wrap: wrap;
+  height: 100%; /* 自動調整に変更 */
 }
 
 .profile_img {
-  width: 45%;
-  border-radius: 10px;
-  height: auto;
-  margin-bottom: 20px;
+  position: absolute;
+  width: 50%;         /* 例: 幅100% */
+  left: 7%;
+  height: auto;        /* 高さは自動で比率維持 */
+  border-radius: 10px; /* 角丸 */
+  display: block;
 }
 
 .profile_text {
+  position: absolute;
+  top: 45%;          /* 画像上の位置を調整 */
+  right: 7%;
   background-color: rgba(255, 255, 255, 0.882);
   padding: 20px;
   border-radius: 10px;
-  width: 45%;
-  font-size: 17px;
-  line-height: 1.8;
+  max-width: 40%;
 }
 
 
